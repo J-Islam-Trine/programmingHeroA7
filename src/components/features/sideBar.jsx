@@ -5,7 +5,7 @@ import React from "react";
 //declare funtion
 const SideBar = ({credit, courseList, price}) => {
     return(
-       <div className=" w-80 bg-white p-6">
+       <div className=" w-80 h-1/2 rounded-lg bg-white p-6">
             <div className="pb-4">
                 <p className=" text-lg font-bold leading-7 text-newBlue">Credit Hour Remaining {20-credit} hr</p>
             </div>
