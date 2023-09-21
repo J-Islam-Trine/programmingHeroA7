@@ -3,7 +3,7 @@ import React from "react";
 
 
 //declare funtion
-const Card = ({name, imageLink, description, price, credit}) => {
+const Card = ({name, imageLink, description, price, credit, handleAddCourses}) => {
     return(
         <div className="card w-96 bg-white">
   <figure className="px-4 pt-4">
@@ -24,7 +24,7 @@ const Card = ({name, imageLink, description, price, credit}) => {
       
     </div>
     <div className="card-actions mt-6">
-      <button className="btn btn-primary bg-newBlue border-0 w-full text-white font-semibold text-lg">Buy Now</button>
+      <button className="btn btn-primary bg-newBlue border-0 w-full text-white font-semibold text-lg" onClick={() => handleAddCourses(name, price, credit)}>Buy Now</button>
     </div>
   </div>
 </div>
