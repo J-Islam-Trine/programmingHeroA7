@@ -12,7 +12,7 @@ const CourseGrid = ({handleAddCourses}) => {
     useEffect(() => {
         async function getData()
         {
-            const initialData = await fetch('./courses.json');
+            const initialData = await fetch('https://eoznedgymsyemgu.m.pipedream.net/');
         const jsonData = await initialData.json();
         setCourse(jsonData);
         }
