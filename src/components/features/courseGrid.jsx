@@ -12,7 +12,7 @@ const CourseGrid = ({handleAddCourses}) => {
     useEffect(() => {
         async function getData()
         {
-            const initialData = await fetch('./src/data/courses.json');
+            const initialData = await fetch('./courses.json');
         const jsonData = await initialData.json();
         setCourse(jsonData);
         }
