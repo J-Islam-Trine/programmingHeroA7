@@ -6,9 +6,8 @@ import { useState, useEffect } from "react";
 import Card from "../blocks/card";
 
 //declare funtion
-const CourseGrid = () => {
+const CourseGrid = ({handleAddCourses}) => {
     const [course, setCourse] = useState([])
-    const [dummyData, setDummyData] = useState([])
 
     useEffect(() => {
         async function getData()
@@ -24,8 +23,8 @@ const CourseGrid = () => {
     return(
         <div className="grid grid-cols-3  gap-4">
             {
-                course.map(singleCourse => <Card name={singleCourse.name} imageLink={singleCourse.image_link} description={singleCourse.description}
-                price={singleCourse.price} credit={singleCourse.credit_in_hour}
+                course.map((singleCourse, index) => <Card key={index} name={singleCourse.name} imageLink={singleCourse.image_link} description={singleCourse.description}
+                price={singleCourse.price} credit={singleCourse.credit_in_hour} handleAddCourses={handleAddCourses}
                 />)
             }
         </div>
